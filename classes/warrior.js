@@ -1,8 +1,8 @@
 const Fighter = require("./fighter");
 
-class Ranger extends Fighter{
+class Warrior extends Fighter{
     dodge(enemyAttackChance){
-        let dodgeChance = 1 - (enemyAttackChance / (enemyAttackChance + (this.chances * this.speed / 10) ** 2))
+        let dodgeChance = 1 - (enemyAttackChance / (enemyAttackChance + (this.chances * this.speed / 8) ** 0.8))
         super.dodgeChance(dodgeChance)
     }
     attack(enemyDodgeChance){
@@ -10,9 +10,9 @@ class Ranger extends Fighter{
         super.attackChance(attackChance)
     }
     block(enemyAttackChance){
-        let blockChance = 1 - (enemyAttackChance / (enemyAttackChance + (this.chances * this.speed / 19) ** 2))
+        let blockChance = 1 - (enemyAttackChance / (enemyAttackChance + (this.chances * this.speed / 7) ** 2))
         super.blockChance(blockChance)
     }
 }
 
-module.exports = Ranger;
+module.exports = Warrior;

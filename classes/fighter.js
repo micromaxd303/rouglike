@@ -8,19 +8,16 @@ class Fighter{
         this.chances = chances
     }
 
-    dodge(enemyAttackChance){
-        let dodgeChance = 1 - (enemyAttackChance / (enemyAttackChance + (this.chances * this.speed / 8) ** 0.8))
-        console.log(dodgeChance.toFixed(2))
+    dodgeChance(dodgeChance){
+        console.log(dodgeChance.toFixed(2), '- dodgeChance')
     }
 
-    attack(enemyDodgeChance){
-        let attackChance = 1 - (enemyDodgeChance / (enemyDodgeChance + (this.chances * this.dmg / 2 ** 0.8)))
-        console.log(attackChance.toFixed(2))
+    attackChance(attackChance){
+        console.log(attackChance.toFixed(2), '- attackChance')
     }
-
-    block(){
-        let blockChance = (this.chances * (this.hp - this.speed * 4)) / 100
-        console.log(blockChance)
+h
+    blockChance(blockChance){     
+        console.log(blockChance.toFixed(2), '- blockChance')
     }
 
 }

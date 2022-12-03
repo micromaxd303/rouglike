@@ -1,9 +1,15 @@
 const Fighter = require('./classes/fighter.js');
+
 const Ranger = require('./classes/ranger.js');
+const Warrior = require('./classes/warrior.js');
 
 
-const Squad = new Ranger(150, 12, 30, 0.2)
+const ranger = new Ranger(150, 12, 30, 0.2)
+const warrior = new Warrior(250, 10, 10, 0.4)
 
-Squad.dodgeChance(0.8)
-Squad.attackChance(0.5)
-Squad.blockChance()
+ranger.dodge(1)
+ranger.attack(1)
+ranger.block(1)
+warrior.dodge(1)
+warrior.attack(1)
+warrior.block(1)
