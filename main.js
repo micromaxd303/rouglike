@@ -2,6 +2,7 @@ const Fighter = require('./classes/fighter.js');
 
 const Ranger = require('./classes/ranger.js');
 const Warrior = require('./classes/warrior.js');
+const Spearman = require('./classes/spearman.js');
 
 
 const ranger = new Ranger(150, 12, 30, 0.2)
